@@ -1,13 +1,121 @@
-/* public/css/style.css */
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #fffaf7;
-  color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
 }
-.navbar-brand {
-  font-weight: 700;
+
+/* Contenedor */
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
 }
-.container img {
-  max-height: 420px;
-  object-fit: cover;
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #d2d6dc;
+    background: #f9fafb;
+    transition: .2s;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26,115,232,0.3);
+    outline: none;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    background: #1666c1;
+    transform: scale(1.02);
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+table th {
+    background: #1a73e8;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover td {
+    background: #f1f5f9;
+}
+
+/* Botones de acción */
+.btn-edit {
+    background: #ffb400;
+    padding: 7px 12px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.btn-edit:hover {
+    background: #e09c00;
+}
+
+.btn-delete {
+    background: #e63946;
+    padding: 7px 12px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.btn-delete:hover {
+    background: #c92c38;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
