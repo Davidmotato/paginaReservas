@@ -1,19 +1,19 @@
-// routes/reservas.js
+
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-// Landing: formulario de reserva
+
 router.get('/', (req, res) => {
   res.render('index', { error: null, form: {} });
 });
 
-// Enviar reserva (desde landing)
+
 router.post('/reservar', async (req, res) => {
   try {
     const { cliente, email, telefono, fecha, hora, personas, notas } = req.body;
 
-    // Validación simple
+    
     if (!cliente || !fecha || !hora || !personas) {
       return res.render('index', { error: 'Completa los campos obligatorios.', form: req.body });
     }
@@ -31,14 +31,14 @@ router.post('/reservar', async (req, res) => {
   }
 });
 
-// Página de éxito
+
 router.get('/success', (req, res) => {
   res.render('success');
 });
 
 /* ------------- RUTAS ADMIN (CRUD) ------------- */
 
-// Listar reservas (panel admin simple)
+
 router.get('/admin/reservas', async (req, res) => {
   try {
     const [rows] = await db.execute('SELECT * FROM reservas ORDER BY fecha ASC, hora ASC');

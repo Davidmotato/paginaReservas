@@ -1,4 +1,4 @@
-/* Fuente moderna */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -9,7 +9,7 @@ body {
     color: #333;
 }
 
-/* Contenedor */
+
 .container {
     max-width: 800px;
     margin: 60px auto;
@@ -20,14 +20,14 @@ body {
     animation: fadeIn 0.5s ease;
 }
 
-/* Títulos */
+
 h1, h2 {
     text-align: center;
     color: #1a73e8;
     font-weight: 600;
 }
 
-/* Inputs */
+
 input, select {
     width: 100%;
     padding: 12px;
@@ -46,7 +46,7 @@ input:focus, select:focus {
     outline: none;
 }
 
-/* Botón */
+
 button {
     width: 100%;
     padding: 14px;
@@ -64,7 +64,7 @@ button:hover {
     transform: scale(1.02);
 }
 
-/* Tabla */
+
 table {
     width: 100%;
     border-collapse: collapse;
